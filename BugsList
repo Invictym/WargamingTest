@@ -1,0 +1,8 @@
+1 element from Sex radio group must be selected by default
+Fields "First name", "Last name", "Mobile phone" must remove spaces
+Password field musnt support spaces
+Error massage show wrong field name : "id.country" must be as named on page
+Error massage contains unusful information "Country cannot be loaded with address->id_country"
+When no country schoosen must be only 1 message. "Country is invalid" not expected
+Field address2 disappeared after trying to register with wrong credentials
+Email field on AUTHENTICATION page support Unicod simvols
