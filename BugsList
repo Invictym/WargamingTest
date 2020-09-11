@@ -1,0 +1,58 @@
+1 element from Sex radio group must be selected by default
+Fields "First name", "Last name", "Mobile phone" must remove spaces
+Password field musnt support spaces
+Error massage show wrong field name : "id.country" must be as named on page
+Error massage contains unusful information "Country cannot be loaded with address->id_country"
+When no country schoosen must be only 1 message. "Country is invalid" not expected
+Field address2 disappeared after trying to register with wrong credentials
+Email field on AUTHENTICATION page support Unicod symbols
+
+
+
+                Email field on AUTHENTICATION page support Unicod symbols
+
+major
+
+Steps to reproduse:
+1. Open page: http://automationpractice.com/index.php?controller=authentication&back=my-account#account-creation
+2. At "CREATE AN ACCOUNT" block in "Email address" field write "1test&#09@mail.com"
+3. Click "Create an account"
+4. Wait to navigation to "CREATE AN ACCOUNT" page
+Result: Text in "Email" field: "1test	@mail.com"
+
+Expected result:
+All symbols must be as they have been writing in field
+
+                 Field "Address (Line 2)" at "CREATE AN ACCOUNT" disappeared after trying to register with wrong credentials
+
+citical
+
+Steps to reproduse:
+1. Open page: http://automationpractice.com/index.php?controller=authentication&back=my-account#account-creation
+2. At "CREATE AN ACCOUNT" block in "Email address" field write "1test@mail.com"
+3. Click "Create an account"
+4. Wait to navigation to "CREATE AN ACCOUNT" page
+5. CLick on "Register"
+Result: Address (Line 2) disappeared
+
+Expected result:
+Address (Line 2) must be shown all time
+
+
+               Fields "First name", "Last name", "Mobile phone" on "CREATE AN ACCOUNT" page must remove spaces
+ 
+critical
+
+For each fields same steps
+
+Steps to reproduse:
+1. Open page: http://automationpractice.com/index.php?controller=authentication&back=my-account#account-creation
+2. At "CREATE AN ACCOUNT" block in "Email address" field write "12test@mail.com"
+3. Click "Create an account"
+4. Wait to navigation to "CREATE AN ACCOUNT" page
+5. Write in "First name" field "   " 3 spaces
+6. CLick on "Register"
+Result: error message didn't contains error that "First name field" is empty
+
+Expected result:
+Fields musn't give posobiliti to use spaces
